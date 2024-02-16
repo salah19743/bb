@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SparkChat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="icon" type="image/x-icon" href="assets/.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <img class="menuButton" src="assets/menu.png">
+            <a href="/"><img class="logo" src="assets/Logo.png"></a>
+            <p class="usersOnline"></p>
+        </div>
+        <div class="menuCover" style="display: none;"></div>
+        <div class="menu">
+            <img class="menuClose" src="assets/arrowLeft.png">
+            <li class="links">
+                <ul><a href="/"><p>Chat With A Stranger</p></a></ul>
+                <ul><a href="/about-us"><p>About Us</p></a></ul>
+                <ul><a href="/contact-us"><p>Contact Us</p></a></ul>
+            </li>
+        </div>
+        <script src="js/menu.js"></script>
+        <div class="content">
+            <%- include(content) %>
+        </div>
+    </body>
+</html>

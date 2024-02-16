@@ -1,0 +1,133 @@
+.content {
+    overflow: hidden;
+}
+
+.text {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    flex: 10;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-width: 100%;
+    white-space: normal;
+    padding: 15px;
+}
+
+.ownMsg, .strangerMsg {
+    display: flex;
+}
+
+.ownMsg > *, .strangerMsg > * {
+    margin: 0px;
+}
+
+.ownMsgSender {
+    color: #cf2b2b;
+}
+
+.strangerMsgSender {
+    color: #3c9bcf;
+}
+
+.controls {
+    flex: 1;
+    display: flex;
+}
+
+.controls > button {
+    width: 150px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.startChat {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    outline: none;
+    font-size: 18px;
+}
+
+.input:disabled {
+    cursor: not-allowed;
+}
+
+.input::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.input:disabled::placeholder {
+    opacity: 0.25;
+}
+
+.send {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.send > img {
+    width: 35px;
+}
+
+.send:disabled {
+    cursor: not-allowed;
+}
+
+.send:disabled > img {
+    opacity: 0.25;
+}
+
+@media screen and (max-width: 600px) {
+    .newChat,
+    .send {
+        flex: 1;
+    }
+    .input {
+        flex: 1.5;
+    }
+}
